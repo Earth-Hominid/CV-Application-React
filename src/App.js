@@ -1,9 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Nav from './components/Nav';
+import Header from './components/Header';
+import './components/Header.css';
 
-export class App extends Component {
-  render() {
-    return <div></div>;
-  }
+function App() {
+  return (
+    <div>
+      <Nav />
+      <Header />
+    </div>
+  );
 }
 
 export default App;
