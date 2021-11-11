@@ -26,8 +26,17 @@ function Header() {
           Email Address
         </label>
         <input type="email" className="personal_input"></input>
-        <label className="form_text">Phone Number</label>
-        <input className="personal_input"></input>
+        <label for="phone" className="form_text">
+          Phone Number
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          className="personal_input"
+          placeholder="Country code + City code + Phone number"
+          maxLength="255"
+        ></input>
         <div className="button_holder">
           <input id="submit_button" type="submit" value="Submit"></input>
           <input id="reset_button" type="reset"></input>
