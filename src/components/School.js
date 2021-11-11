@@ -1,15 +1,23 @@
-import React from "react"
+import React from 'react';
 
-function() {
+function School() {
   return (
     <div>
       <h2>Eductation</h2>
-      <label>Eductational Institution</label>
+      <label>Eductational Institution:</label>
       <input></input>
-      <label></label>
+      <label>Program:</label>
       <input></input>
-      <label></label>
-      <input></input>
+      <label for="start">Start date:</label>
+      <input
+        type="date"
+        id="start"
+        name="program-start"
+        min="1950-01-01"
+        max="2025-01-01"
+      ></input>
     </div>
-  )
+  );
 }
+
+export default School;

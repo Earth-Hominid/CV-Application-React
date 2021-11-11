@@ -3,8 +3,8 @@ import React from 'react';
 function Nav() {
   return (
     <div>
-      <nav>
-        <h1>CV Application</h1>
+      <nav className="navigation">
+        <h1 className="nav_headline">CV Application</h1>
       </nav>
     </div>
   );
