@@ -6,6 +6,7 @@ import School from './components/School';
 import Work from './components/Work';
 import Welcome from './components/Welcome';
 import Resume from './components/Resume';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Nav />
       <Welcome />
       <Header />
+      <Profile />
       <School />
       <Work />
       <Resume />

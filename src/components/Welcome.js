@@ -3,7 +3,7 @@ import React from 'react';
 function Welcome() {
   return (
     <div>
-      <div className="welcome">
+      <div className="card_header">
         <h2 className="welcome_header">
           Welcome to Resume Builder. We're glad you made it! Click the button
           below and let's begin!

@@ -25,9 +25,21 @@
   font-size: 2.5em;
 }
 
-.welcome {
+.card_header {
   display: flex;
   justify-content: center;
+}
+
+.p_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100%-20px);
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.p_center_text {
 }
 
 .welcome_header {
@@ -98,6 +110,29 @@
   font-size: calc(8px + 1vmin);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.textarea_input {
+  width: 60vw;
+  height: 25vh;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 2px solid #02bd9c;
+  border-radius: 4px;
+  font-size: calc(8px + 1vmin);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  resize: none;
+}
+
+.input:focus {
+  outline: none !important;
+  border: 2px solid #008060;
+}
+
+.textarea_input:focus {
+  outline: none !important;
+  border: 2px solid #008060;
 }
 
 .education_input {
@@ -278,4 +313,9 @@
 .line_break {
   border-bottom: 1px solid black;
   width: calc(100% - 50px);
+}
+
+.resume_holder {
+  margin-right: 15%;
+  margin-left: 15%;
 }
