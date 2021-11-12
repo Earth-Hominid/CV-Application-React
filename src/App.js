@@ -5,6 +5,7 @@ import './components/styles.css';
 import School from './components/School';
 import Work from './components/Work';
 import Welcome from './components/Welcome';
+import Resume from './components/Resume';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <School />
       <Work />
+      <Resume />
     </div>
   );
 }
