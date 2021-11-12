@@ -4,18 +4,47 @@
   box-sizing: border-box;
 }
 
-#logo {
-  height: 200px;
-  width: auto;
-}
-#logo-holder {
-  margin-left: 2vw;
-}
 .navigation {
+  background-image: radial-gradient(
+      circle at 24% 76%,
+      rgb(55, 98, 247) 0%,
+      rgb(55, 98, 247) 10%,
+      transparent 10%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 76% 76%,
+      rgb(55, 98, 247) 0%,
+      rgb(55, 98, 247) 10%,
+      transparent 10%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 76% 24%,
+      rgb(55, 98, 247) 0%,
+      rgb(55, 98, 247) 10%,
+      transparent 10%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 24% 24%,
+      rgb(55, 98, 247) 0%,
+      rgb(55, 98, 247) 10%,
+      transparent 10%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at center center,
+      rgb(23, 9, 214) 0%,
+      rgb(23, 9, 214) 71%,
+      transparent 71%,
+      transparent 100%
+    ),
+    linear-gradient(90deg, rgb(55, 98, 247), rgb(55, 98, 247));
+  background-size: 23px 23px;
   height: 10.5vh;
   display: flex;
-  flex-direction: row;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
 }
 
@@ -24,53 +53,6 @@
   font-family: Roboto;
   font-size: 2.5em;
 }
-
-.welcome {
-  display: flex;
-  justify-content: center;
-}
-
-.welcome_header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: auto;
-  margin-bottom: 8px;
-  max-width: 740px;
-  font-size: 1.5em;
-  margin-left: 7vw;
-  margin-right: 7vw;
-}
-
-.welcome_button_holder {
-  margin-top: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.welcome_button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.125em;
-  font-weight: 600;
-  line-height: 1.23em;
-  width: 15vw;
-  min-width: 150px;
-  height: 7vh;
-  white-space: normal;
-  word-wrap: break-word;
-  text-align: center;
-  color: white;
-  background-color: #02bd9c;
-  padding: 14px 24px;
-  border-radius: 4px;
-  cursor: pointer;
-  border-width: 0;
-}
-
 .form_text {
   font-size: calc(10px + 2vmin);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -88,12 +70,12 @@
   display: grid;
 }
 
-.input {
+.personal_input {
   width: 60vw;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  border: 2px solid #02bd9c;
+  border: 2px solid #1709d6;
   border-radius: 20px;
   font-size: calc(8px + 1vmin);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -112,7 +94,51 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.experience_input {
+  width: 60vw;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #02bd9c;
+  border-radius: 20px;
+  font-size: calc(8px + 1vmin);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 #submit_button {
+  max-width: 150px;
+  border: 2px solid #1709d6;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #1709d6;
+  font-weight: 600;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+#submit_button:hover {
+  color: white;
+  background-color: #1709d6;
+}
+
+#edu_submit_button {
+  max-width: 150px;
+  border: 2px solid #004c3f;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #004c3f;
+  font-weight: 600;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+#edu_submit_button:hover {
+  color: white;
+  background-color: #004c3f;
+}
+
+#exp_submit_button {
   max-width: 150px;
   border: 2px solid #02bd9c;
   border-radius: 20px;
@@ -123,7 +149,7 @@
   cursor: pointer;
 }
 
-#submit_button:hover {
+#exp_submit_button:hover {
   color: white;
   background-color: #02bd9c;
 }

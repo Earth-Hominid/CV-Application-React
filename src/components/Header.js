@@ -5,27 +5,17 @@ function Header() {
     <div className="main_form_card">
       <form className="personal_form">
         <label for="fname" className="form_text">
-          First Name
+          Name:
         </label>
-        <input
-          type="text"
-          id="fname"
-          name="fname"
-          className="personal_input"
-        ></input>
+        <input type="text" id="fname" name="fname" className="input"></input>
         <label for="lname" className="form_text">
-          Last Name
+          Surname:
         </label>
-        <input
-          className="personal_input"
-          type="text"
-          id="lname"
-          name="lname"
-        ></input>
+        <input className="input" type="text" id="lname" name="lname"></input>
         <label for="email" className="form_text">
           Email Address
         </label>
-        <input type="email" className="personal_input"></input>
+        <input type="email" className="input"></input>
         <label for="phone" className="form_text">
           Phone Number
         </label>
@@ -33,7 +23,7 @@ function Header() {
           type="tel"
           id="phone"
           name="phone"
-          className="personal_input"
+          className="input"
           placeholder="Country code + City code + Phone number"
           maxLength="255"
         ></input>

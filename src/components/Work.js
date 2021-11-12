@@ -3,17 +3,12 @@ import React from 'react';
 function Work() {
   return (
     <div>
-      <div className="experience_header">
-        <div className="headline_circle">
-          <h2 className="experience_title">Professional Experience</h2>
-        </div>
-      </div>
       <div className="main_form_card">
         <form className="experience_form">
           <label className="form_text">Company Name:</label>
-          <input className="experience_input"></input>
+          <input className="input"></input>
           <label className="form_text">Sector</label>
-          <select id="sector" name="sector" className="experience_input">
+          <select id="sector" name="sector" className="input">
             <option value="">Select</option>
             <option value="Aerospace">Aerospace</option>
             <option value="Agriculture">Farming</option>
@@ -63,11 +58,7 @@ function Work() {
             </option>
           </select>
           <label className="form_text">Profession</label>
-          <select
-            id="profession"
-            name="profession"
-            className="experience_input"
-          >
+          <select id="profession" name="profession" className="input">
             <option value="">Select</option>
             <option value="Academic / Researcher">Academic / Researcher</option>
             <option value="Advisor / Consultant">Advisor / Consultant</option>
@@ -94,7 +85,7 @@ function Work() {
             Start date:
           </label>
           <input
-            className="experience_input"
+            className="input"
             type="date"
             id="start"
             name="program-start"
@@ -105,7 +96,7 @@ function Work() {
             End date:
           </label>
           <input
-            className="experience_input"
+            className="input"
             type="date"
             id="end"
             name="program-end"
@@ -113,7 +104,7 @@ function Work() {
             max="2025-01-01"
           ></input>
           <div className="button_holder">
-            <input id="exp_submit_button" type="submit" value="Submit"></input>
+            <input id="submit_button" type="submit" value="Submit"></input>
             <input id="reset_button" type="reset"></input>
           </div>
         </form>
