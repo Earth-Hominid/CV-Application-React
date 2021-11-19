@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 
 class Profile extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      profile: '',
+    };
+  }
+
+  handleProfileChange = (event) => {
+    this.setState({
+      profile: event.target.value,
+    });
+  };
+
   render() {
     return (
       <div>
@@ -21,6 +35,8 @@ class Profile extends Component {
               id="professional_summary"
               name="profile"
               className="textarea_input"
+              value={this.state.profile}
+              onChange={this.handleProfileChange}
             ></textarea>
             <div className="button_holder">
               <input id="submit_button" type="submit" value="Submit"></input>
