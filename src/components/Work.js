@@ -81,9 +81,7 @@ function Work() {
             <option value="Venture Capitalist">Investor</option>
             <option value="Other">Other</option>
           </select>
-          <label className="form_text" for="start">
-            Start date:
-          </label>
+          <label className="form_text">Start date:</label>
           <input
             className="input"
             type="date"
@@ -92,9 +90,7 @@ function Work() {
             min="1950-01-01"
             max="2025-01-01"
           ></input>
-          <label className="form_text" for="start">
-            End date:
-          </label>
+          <label className="form_text">End date:</label>
           <input
             className="input"
             type="date"

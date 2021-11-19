@@ -1,39 +1,94 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Header() {
-  return (
-    <div className="main_form_card">
-      <form className="personal_form">
-        <label for="fname" className="form_text">
-          Name:
-        </label>
-        <input type="text" id="fname" name="fname" className="input"></input>
-        <label for="lname" className="form_text">
-          Surname:
-        </label>
-        <input className="input" type="text" id="lname" name="lname"></input>
-        <label for="email" className="form_text">
-          Email Address
-        </label>
-        <input type="email" className="input"></input>
-        <label for="phone" className="form_text">
-          Phone Number
-        </label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          className="input"
-          placeholder="Country code + City code + Phone number"
-          maxLength="255"
-        ></input>
-        <div className="button_holder">
-          <input id="submit_button" type="submit" value="Submit"></input>
-          <input id="reset_button" type="reset"></input>
-        </div>
-      </form>
-    </div>
-  );
+export class Header extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      firstname: '',
+      lastname: '',
+      email: '',
+      phone: '',
+    };
+  }
+
+  handleFirstnameChange = (event) => {
+    this.setState({
+      firstname: event.target.value,
+    });
+  };
+
+  handleLastnameChange = (event) => {
+    this.setState({
+      lastname: event.target.value,
+    });
+  };
+
+  handleEmailChange = (event) => {
+    this.setState({
+      email: event.target.value,
+    });
+  };
+
+  handlePhoneChange = (event) => {
+    this.setState({
+      phone: event.target.value,
+    });
+  };
+
+  render() {
+    return (
+      <div className="main_form_card">
+        <form className="personal_form">
+          <label className="form_text">Name:</label>
+          <input
+            type="text"
+            value={this.state.firstname}
+            onChange={this.handleFirstnameChange}
+            id="fname"
+            name="fname"
+            className="input"
+          ></input>
+          <label className="form_text">Surname:</label>
+          <input
+            className="input"
+            type="text"
+            value={this.state.lastname}
+            onChange={this.handleLastnameChange}
+            id="lname"
+            name="lname"
+          ></input>
+          <label className="form_text">Email Address</label>
+          <input
+            type="email"
+            value={this.state.email}
+            onChange={this.handleEmailChange}
+            className="input"
+          ></input>
+          <label className="form_text">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            className="input"
+            placeholder="Country code + City code + Phone number"
+            maxLength="255"
+            value={this.state.phone}
+            onChange={this.handlePhoneChange}
+          ></input>
+          <div className="button_holder">
+            <input
+              id="submit_button"
+              type="submit"
+              value="Submit"
+              // onClick={handleClick}
+            ></input>
+            <input id="reset_button" type="reset"></input>
+          </div>
+        </form>
+      </div>
+    );
+  }
 }
 
 export default Header;
