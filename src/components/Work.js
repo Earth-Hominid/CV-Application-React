@@ -5,12 +5,19 @@ class Work extends Component {
     super(props);
 
     this.state = {
+      company: '',
       sector: '',
       profession: '',
       start: '',
       end: '',
     };
   }
+
+  handleCompanyChange = (event) => {
+    this.setState({
+      company: '',
+    });
+  };
 
   handleSectorChange = (event) => {
     this.setState({
@@ -36,13 +43,26 @@ class Work extends Component {
     });
   };
 
+  handleSubmit = (event) => {
+    alert(
+      `${this.state.profession} ${this.state.sector} ${this.state.start} {this.state.end}`
+    );
+  };
+
   render() {
     return (
       <div>
         <div className="main_form_card">
-          <form className="experience_form">
+          <form className="experience_form" onSubmit={this.handleSubmit}>
             <label className="form_text">Company Name:</label>
-            <input className="input"></input>
+            <input
+              className="input"
+              value={this.state.company}
+              type="text"
+              onChange={this.handleCompanyChange}
+              id="company"
+              name="company"
+            ></input>
             <label className="form_text">Sector</label>
             <select
               id="sector"
