@@ -15,7 +15,7 @@ class Work extends Component {
 
   handleCompanyChange = (event) => {
     this.setState({
-      company: '',
+      company: event.target.value,
     });
   };
 
@@ -45,11 +45,13 @@ class Work extends Component {
 
   handleSubmit = (event) => {
     alert(
-      `${this.state.profession} ${this.state.sector} ${this.state.start} {this.state.end}`
+      `${this.state.company} ${this.state.profession} ${this.state.sector} ${this.state.start} ${this.state.end}`
     );
+    event.preventDefault();
   };
 
   render() {
+    const { company, sector, profession, start, end } = this.state;
     return (
       <div>
         <div className="main_form_card">
@@ -57,7 +59,7 @@ class Work extends Component {
             <label className="form_text">Company Name:</label>
             <input
               className="input"
-              value={this.state.company}
+              value={company}
               type="text"
               onChange={this.handleCompanyChange}
               id="company"
@@ -66,7 +68,7 @@ class Work extends Component {
             <label className="form_text">Sector</label>
             <select
               id="sector"
-              value={this.state.sector}
+              value={sector}
               onChange={this.handleSectorChange}
               name="sector"
               className="input"
@@ -123,7 +125,7 @@ class Work extends Component {
             </select>
             <label className="form_text">Profession</label>
             <select
-              value={this.state.profession}
+              value={profession}
               onChange={this.handleProfessionChange}
               id="profession"
               name="profession"
@@ -158,7 +160,7 @@ class Work extends Component {
             <label className="form_text">Start date:</label>
             <input
               className="input"
-              value={this.state.start}
+              value={start}
               onChange={this.handleStartChange}
               type="date"
               id="start"
@@ -169,7 +171,7 @@ class Work extends Component {
             <label className="form_text">End date:</label>
             <input
               className="input"
-              value={this.state.end}
+              value={end}
               onChange={this.handleEndChange}
               type="date"
               id="end"
