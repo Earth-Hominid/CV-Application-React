@@ -39,6 +39,7 @@ export class School extends Component {
   handleSubmit = (event) => {};
 
   render() {
+    const { institution, program, start, end } = this.state;
     return (
       <div>
         <div className="main_form_card">
@@ -46,18 +47,18 @@ export class School extends Component {
             <label className="form_text"> Institution:</label>
             <input
               className="input"
-              value={this.state.institution}
+              value={institution}
               onChange={this.handleInstitutionChange}
             ></input>
             <label className="form_text">Program:</label>
             <input
               className="input"
-              value={this.state.program}
+              value={program}
               onChange={this.handleProgramChange}
             ></input>
             <label className="form_text">Start date:</label>
             <input
-              value={this.state.start}
+              value={start}
               onChange={this.handleStartChange}
               className="input"
               type="date"
@@ -69,7 +70,7 @@ export class School extends Component {
             <label className="form_text">End date:</label>
             <input
               className="input"
-              value={this.state.end}
+              value={end}
               onChange={this.handleEndChange}
               type="date"
               id="end"
