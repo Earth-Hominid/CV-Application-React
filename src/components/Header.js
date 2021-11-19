@@ -37,13 +37,14 @@ export class Header extends Component {
   };
 
   render() {
+    const { firstname, lastname, email, phone } = this.state;
     return (
       <div className="main_form_card">
         <form className="personal_form">
           <label className="form_text">Name:</label>
           <input
             type="text"
-            value={this.state.firstname}
+            value={firstname}
             onChange={this.handleFirstnameChange}
             id="fname"
             name="fname"
@@ -53,7 +54,7 @@ export class Header extends Component {
           <input
             className="input"
             type="text"
-            value={this.state.lastname}
+            value={lastname}
             onChange={this.handleLastnameChange}
             id="lname"
             name="lname"
@@ -61,7 +62,7 @@ export class Header extends Component {
           <label className="form_text">Email Address</label>
           <input
             type="email"
-            value={this.state.email}
+            value={email}
             onChange={this.handleEmailChange}
             className="input"
           ></input>
@@ -73,7 +74,7 @@ export class Header extends Component {
             className="input"
             placeholder="Country code + City code + Phone number"
             maxLength="255"
-            value={this.state.phone}
+            value={phone}
             onChange={this.handlePhoneChange}
           ></input>
           <div className="button_holder">
