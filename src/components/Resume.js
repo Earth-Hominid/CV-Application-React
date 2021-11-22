@@ -1,10 +1,11 @@
 import React from 'react';
 
-function Resume() {
+const Resume = (props) => {
+  console.log(props);
   return (
     <div>
       <div className="resume_holder">
-        <h2>Christain Feist</h2>
+        <h2>{props.name}</h2>
         <h4>998-999-9999, email@email.com</h4>
         <div className="line_break"></div>
         <div className="profile">
@@ -47,6 +48,6 @@ function Resume() {
       </div>
     </div>
   );
-}
+};
 
 export default Resume;

@@ -15,6 +15,11 @@ class Profile extends Component {
     });
   };
 
+  handleSubmit = (event) => {
+    alert(`${this.state.profile}`);
+    event.preventDefault();
+  };
+
   render() {
     return (
       <div>
@@ -29,7 +34,7 @@ class Profile extends Component {
           </p>
         </div>
         <div className="main_form_card">
-          <form className="education_form">
+          <form className="education_form" onSubmit={this.handleSubmit}>
             <textarea
               type="text"
               id="professional_summary"

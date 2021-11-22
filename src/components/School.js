@@ -36,7 +36,12 @@ export class School extends Component {
     });
   };
 
-  handleSubmit = (event) => {};
+  handleSubmit = (event) => {
+    alert(
+      `${this.state.institution} ${this.state.program} ${this.state.start} ${this.state.end}`
+    );
+    event.preventDefault();
+  };
 
   render() {
     const { institution, program, start, end } = this.state;
