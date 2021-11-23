@@ -44,7 +44,7 @@ class Header extends Component {
     const { firstname, lastname, email, phone } = this.state;
     return (
       <div className="main_form_card">
-        <form className="personal_form">
+        <form className="personal_form" onSubmit={this.submitForm}>
           <label className="form_text">Name:</label>
           <input
             type="text"
@@ -83,12 +83,7 @@ class Header extends Component {
             onChange={this.handlePhoneChange}
           ></input>
           <div className="button_holder">
-            <input
-              id="submit_button"
-              type="button"
-              value="Submit"
-              onClick={this.submitForm}
-            ></input>
+            <input id="submit_button" type="submit" value="Submit"></input>
             <input id="reset_button" type="reset"></input>
           </div>
         </form>
