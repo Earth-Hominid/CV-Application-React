@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import uniqid from 'uniqid';
 
 class Header extends Component {
   constructor(props) {
@@ -13,12 +12,16 @@ class Header extends Component {
     };
   }
 
-  handleFirstnameChange = (event) => {
+  submitForm = (event) => {
+    event.preventDefault();
+    this.props.handlePersonalInfoProvided(this.state);
+  };
+
+  handleFirstNameChange = (event) => {
     this.setState({
       firstname: event.target.value,
     });
   };
-
   handleLastnameChange = (event) => {
     this.setState({
       lastname: event.target.value,
@@ -37,25 +40,18 @@ class Header extends Component {
     });
   };
 
-  handleSubmit = (event) => {
-    alert(
-      `${this.state.firstname} ${this.state.lastname} ${this.state.email} ${this.state.phone} `
-    );
-    event.preventDefault();
-  };
-
   render() {
     const { firstname, lastname, email, phone } = this.state;
     return (
       <div className="main_form_card">
-        <form className="personal_form" onSubmit={this.handleSubmit}>
+        <form className="personal_form">
           <label className="form_text">Name:</label>
           <input
             type="text"
             value={firstname}
-            onChange={this.handleFirstnameChange}
+            onChange={this.handleFirstNameChange}
             id="fname"
-            name="fname"
+            name="firstname"
             className="input"
           ></input>
           <label className="form_text">Surname:</label>
@@ -87,7 +83,12 @@ class Header extends Component {
             onChange={this.handlePhoneChange}
           ></input>
           <div className="button_holder">
-            <input id="submit_button" type="submit" value="Submit"></input>
+            <input
+              id="submit_button"
+              type="button"
+              value="Submit"
+              onClick={this.submitForm}
+            ></input>
             <input id="reset_button" type="reset"></input>
           </div>
         </form>
