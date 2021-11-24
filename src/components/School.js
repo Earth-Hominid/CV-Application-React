@@ -7,10 +7,15 @@ export class School extends Component {
     this.state = {
       institution: '',
       program: '',
-      start: '',
-      end: '',
+      educationStartDate: '',
+      educationEndDate: '',
     };
   }
+
+  submitForm = (event) => {
+    event.preventDefault();
+    this.props.handleEducationInfoProvided(this.state);
+  };
 
   handleInstitutionChange = (event) => {
     this.setState({
@@ -26,13 +31,13 @@ export class School extends Component {
 
   handleStartChange = (event) => {
     this.setState({
-      start: event.target.value,
+      educationStartDate: event.target.value,
     });
   };
 
   handleEndChange = (event) => {
     this.setState({
-      end: event.target.value,
+      educationEndDate: event.target.value,
     });
   };
 
@@ -44,11 +49,12 @@ export class School extends Component {
   };
 
   render() {
-    const { institution, program, start, end } = this.state;
+    const { institution, program, educationStartDate, educationEndDate } =
+      this.state;
     return (
       <div>
         <div className="main_form_card">
-          <form className="education_form" onSubmit={this.handleSubmit}>
+          <form className="education_form" onSubmit={this.submitForm}>
             <label className="form_text"> Institution:</label>
             <input
               className="input"
@@ -63,7 +69,7 @@ export class School extends Component {
             ></input>
             <label className="form_text">Start date:</label>
             <input
-              value={start}
+              value={educationStartDate}
               onChange={this.handleStartChange}
               className="input"
               type="date"
@@ -75,7 +81,7 @@ export class School extends Component {
             <label className="form_text">End date:</label>
             <input
               className="input"
-              value={end}
+              value={educationEndDate}
               onChange={this.handleEndChange}
               type="date"
               id="end"

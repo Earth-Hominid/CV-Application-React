@@ -8,8 +8,8 @@ class Work extends Component {
       company: '',
       sector: '',
       profession: '',
-      start: '',
-      end: '',
+      professionStartDate: '',
+      professionEndDate: '',
     };
   }
 
@@ -33,29 +33,33 @@ class Work extends Component {
 
   handleStartChange = (event) => {
     this.setState({
-      start: event.target.value,
+      professionStartDate: event.target.value,
     });
   };
 
   handleEndChange = (event) => {
     this.setState({
-      end: event.target.value,
+      professionEndDate: event.target.value,
     });
   };
 
-  handleSubmit = (event) => {
-    alert(
-      `${this.state.company} ${this.state.profession} ${this.state.sector} ${this.state.start} ${this.state.end}`
-    );
+  submitForm = (event) => {
     event.preventDefault();
+    this.props.handleProfessionInfoProvided(this.state);
   };
 
   render() {
-    const { company, sector, profession, start, end } = this.state;
+    const {
+      company,
+      sector,
+      profession,
+      professionStartDate,
+      professionEndDate,
+    } = this.state;
     return (
       <div>
         <div className="main_form_card">
-          <form className="experience_form" onSubmit={this.handleSubmit}>
+          <form className="experience_form" onSubmit={this.submitForm}>
             <label className="form_text">Company Name:</label>
             <input
               className="input"
@@ -160,7 +164,7 @@ class Work extends Component {
             <label className="form_text">Start date:</label>
             <input
               className="input"
-              value={start}
+              value={professionStartDate}
               onChange={this.handleStartChange}
               type="date"
               id="start"
@@ -171,7 +175,7 @@ class Work extends Component {
             <label className="form_text">End date:</label>
             <input
               className="input"
-              value={end}
+              value={professionEndDate}
               onChange={this.handleEndChange}
               type="date"
               id="end"

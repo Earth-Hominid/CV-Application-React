@@ -18,6 +18,15 @@ class App extends Component {
       email: '',
       phone: '',
       profile: '',
+      company: '',
+      sector: '',
+      profession: '',
+      professionStartDate: '',
+      professionEndDate: '',
+      institution: '',
+      program: '',
+      educationStartDate: '',
+      educationEndDate: '',
     };
   }
 
@@ -26,21 +35,45 @@ class App extends Component {
   };
 
   render() {
-    const { firstname, lastname, email, phone, profile } = this.state;
+    const {
+      firstname,
+      lastname,
+      email,
+      phone,
+      profile,
+      company,
+      sector,
+      profession,
+      professionStartDate,
+      professionEndDate,
+      institution,
+      program,
+      educationEndDate,
+      educationStartDate,
+    } = this.state;
     return (
       <div>
         <Nav />
         <Welcome />
         <Header handlePersonalInfoProvided={this.getInputData} />
         <Profile handleProfileProvided={this.getInputData} />
-        <School />
-        <Work />
+        <School handleEducationInfoProvided={this.getInputData} />
+        <Work handleProfessionInfoProvided={this.getInputData} />
         <Resume
           firstname={firstname}
           lastname={lastname}
           email={email}
           phone={phone}
           profile={profile}
+          company={company}
+          sector={sector}
+          profession={profession}
+          professionStartDate={professionStartDate}
+          professionEndDate={professionEndDate}
+          institution={institution}
+          program={program}
+          educationStartDate={educationStartDate}
+          educationEndDate={educationEndDate}
         />
       </div>
     );

@@ -2,7 +2,22 @@ import React, { Component } from 'react';
 
 class Resume extends Component {
   render() {
-    const { firstname, lastname, email, phone, profile } = this.props;
+    const {
+      firstname,
+      lastname,
+      email,
+      phone,
+      profile,
+      company,
+      sector,
+      profession,
+      professionStartDate,
+      professionEndDate,
+      institution,
+      program,
+      educationStartDate,
+      educationEndDate,
+    } = this.props;
     return (
       <div>
         <div className="resume_holder">
@@ -22,8 +37,12 @@ class Resume extends Component {
             <h2>EMPLOYMENT HISTORY</h2>
           </div>
           <div>
-            <h3>Start Date - End Date</h3>
-            <h3>Job Title, Employer</h3>
+            <h3>
+              {professionStartDate} - {professionEndDate}
+            </h3>
+            <h3>
+              {profession}, {company}
+            </h3>
             <h4>City</h4>
             <ul>
               <li>
@@ -41,9 +60,12 @@ class Resume extends Component {
             <h2>EDUCATION</h2>
           </div>
           <div>
-            <h3>Start Date - End Date</h3>
-            <h3>Degree, School</h3>
-            <h4>City</h4>
+            <h3>
+              {educationStartDate} - {educationEndDate}
+            </h3>
+            <h3>
+              {program}, {institution}
+            </h3>
             <ul></ul>
           </div>
         </div>
