@@ -2,21 +2,20 @@ import React, { Component } from 'react';
 
 class Resume extends Component {
   render() {
-    const { firstname } = this.props;
+    const { firstname, lastname, email, phone, profile } = this.props;
     return (
       <div>
         <div className="resume_holder">
-          <h2>{firstname}</h2>
-          <h4>998-999-9999, email@email.com</h4>
+          <h2>
+            {firstname} {lastname}
+          </h2>
+          <h4>
+            {phone}, {email}
+          </h4>
           <div className="line_break"></div>
           <div className="profile">
             <h2>PROFILE</h2>
-            <p>
-              Proficient in various platforms, languages, and embedded systems.
-              Experienced Software Developer adept in bringing forth expertise
-              in design, installation, testing and maintenance of software
-              systems.
-            </p>
+            <p>{profile}</p>
           </div>
           <div className="line_break"></div>
           <div className="employment_history">

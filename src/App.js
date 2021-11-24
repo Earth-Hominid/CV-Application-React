@@ -14,6 +14,10 @@ class App extends Component {
 
     this.state = {
       firstname: '',
+      lastname: '',
+      email: '',
+      phone: '',
+      profile: '',
     };
   }
 
@@ -22,16 +26,22 @@ class App extends Component {
   };
 
   render() {
-    const { firstname } = this.state;
+    const { firstname, lastname, email, phone, profile } = this.state;
     return (
       <div>
         <Nav />
         <Welcome />
         <Header handlePersonalInfoProvided={this.getInputData} />
-        <Profile />
+        <Profile handleProfileProvided={this.getInputData} />
         <School />
         <Work />
-        <Resume firstname={firstname} />
+        <Resume
+          firstname={firstname}
+          lastname={lastname}
+          email={email}
+          phone={phone}
+          profile={profile}
+        />
       </div>
     );
   }
