@@ -1,22 +1,35 @@
 import React, { Component } from 'react';
 
 class Resume extends Component {
+  continue = (e) => {
+    e.preventDefault();
+    // Process form
+    this.props.nextStep();
+  };
+
+  back = (e) => {
+    e.preventDefault();
+    this.props.prevStep();
+  };
+
   render() {
     const {
-      firstname,
-      lastname,
-      email,
-      phone,
-      profile,
-      company,
-      sector,
-      profession,
-      professionStartDate,
-      professionEndDate,
-      institution,
-      program,
-      educationStartDate,
-      educationEndDate,
+      values: {
+        firstname,
+        lastname,
+        email,
+        phone,
+        profile,
+        company,
+        sector,
+        profession,
+        professionStartDate,
+        professionEndDate,
+        institution,
+        program,
+        educationStartDate,
+        educationEndDate,
+      },
     } = this.props;
     return (
       <div>
