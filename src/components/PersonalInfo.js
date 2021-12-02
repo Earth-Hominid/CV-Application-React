@@ -1,55 +1,26 @@
 import React, { Component } from 'react';
 
-class PersonalInfo extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      firstname: '',
-      lastname: '',
-      email: '',
-      phone: '',
-    };
-  }
-
-  submitForm = (event) => {
-    event.preventDefault();
-    this.props.handlePersonalInfoProvided(this.state);
+export class PersonalInfo extends Component {
+  continue = (e) => {
+    e.preventDefault();
+    this.props.nextStep();
   };
 
-  handleFirstNameChange = (event) => {
-    this.setState({
-      firstname: event.target.value,
-    });
-  };
-  handleLastnameChange = (event) => {
-    this.setState({
-      lastname: event.target.value,
-    });
-  };
-
-  handleEmailChange = (event) => {
-    this.setState({
-      email: event.target.value,
-    });
-  };
-
-  handlePhoneChange = (event) => {
-    this.setState({
-      phone: event.target.value,
-    });
+  back = (e) => {
+    e.preventDefault();
+    this.props.prevStep();
   };
 
   render() {
-    const { firstname, lastname, email, phone } = this.state;
+    const { values, handleChange } = this.props;
     return (
       <div className="main_form_card">
-        <form className="personal_form" onSubmit={this.submitForm}>
+        <form className="personal_form">
           <label className="form_text">Name:</label>
           <input
             type="text"
-            value={firstname}
-            onChange={this.handleFirstNameChange}
+            value={values.firstname}
+            onChange={handleChange('firstname')}
             id="fname"
             name="firstname"
             className="input"
@@ -58,8 +29,8 @@ class PersonalInfo extends Component {
           <input
             className="input"
             type="text"
-            value={lastname}
-            onChange={this.handleLastnameChange}
+            value={values.lastname}
+            onChange={handleChange('lastname')}
             id="lname"
             name="lname"
           ></input>
@@ -67,8 +38,8 @@ class PersonalInfo extends Component {
           <input
             type="email"
             name="email"
-            value={email}
-            onChange={this.handleEmailChange}
+            value={values.email}
+            onChange={handleChange('email')}
             className="input"
           ></input>
           <label className="form_text">Phone Number</label>
@@ -79,12 +50,12 @@ class PersonalInfo extends Component {
             className="input"
             placeholder="Country code + City code + Phone number"
             maxLength="255"
-            value={phone}
-            onChange={this.handlePhoneChange}
+            value={values.phone}
+            onChange={handleChange('phone')}
           ></input>
           <div className="button_holder">
-            <input id="submit_button" type="submit" value="Submit"></input>
-            <input id="reset_button" type="reset"></input>
+            <input id="submit_button" type="continue" value="Continue"></input>
+            <input id="back_button" type="back" value="Back"></input>
           </div>
         </form>
       </div>

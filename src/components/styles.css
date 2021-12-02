@@ -152,12 +152,14 @@
 
 #submit_button {
   max-width: 150px;
+  text-align: center;
+  font-size: 0.85rem;
   border: 2px solid #02bd9c;
   border-radius: 20px;
   background-color: transparent;
   color: #02bd9c;
   font-weight: 600;
-  padding: 12px 20px;
+  padding: 0.8em;
   cursor: pointer;
 }
 
@@ -168,7 +170,7 @@
 
 #reset_button {
   max-width: 150px;
-  padding: 12px 20px;
+  padding: 1em;
   border: 2px solid red;
   color: red;
   font-weight: 600;
@@ -178,6 +180,25 @@
 }
 
 #reset_button:hover {
+  color: white;
+  background-color: red;
+}
+
+#back_button {
+  max-width: 150px;
+  margin: 2px;
+  border: 2px solid red;
+  padding: 0.8em;
+  color: red;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+}
+
+#back_button:hover {
   color: white;
   background-color: red;
 }
