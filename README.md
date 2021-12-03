@@ -1,9 +1,48 @@
 # CV-Project
 
-The purpose of this project is to build a CV/Resume building application using React as a framework and utilizing React's original methodology of class components.
+The purpose of this project is to build a CV/Resume building application using React as a framework and utilizing React class components.
 
 ## Description
 
+The purpose of this project is to practice using React's original methodology of class components. Class components are found in a high percentage of React applications, thus it is extremely important to obtain practical experience coding them.
+
+In version 1.0 of this project, all components are built utilizing the class based methodology.
+
 As recommended in React's documentation, state is held in the highest most point of the heirarchial component tree.
 
-Components are built utilizing the class based methodology. The one page applicaton, feels like a multiple page website, due to the stepping through process which is built from switch statements.
+Switch statements were utilized to build a "stepping through process", which provides this one page application the feel of multiple pages.
+
+[Live Demo](https://earth-hominid.github.io/CV-Application-React/) :point_left:
+
+## Install
+
+```
+git clone https://github.com/Earth-Hominid/CV-Application-React.git
+cd cv-project
+npm install
+npm start
+```
+
+### Technology
+
+- ![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
+## Authors
+
+Earth Hominid
+[GitHub](https://github.com/Earth-Hominid)
+
+## Version History
+
+- 0.1
+  - Initial Release
+  - React Class Components
+
+## License
+
+This project is licensed under the [MIT] License - see the LICENSE.md file for details
+
+## Acknowledgments
+
+- [The Odin Project](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/cv-application)
+- [React](https://reactjs.org/)
