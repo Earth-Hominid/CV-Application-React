@@ -53,7 +53,7 @@
 }
 
 .welcome_button_holder {
-  margin-top: 15px;
+  margin-top: 6vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -385,49 +385,88 @@
 }
 
 .fullname {
-  font-size: 21px;
+  font-size: 24px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .phone {
-  font-size: 10px;
+  font-size: 12px;
   font-family: sans-serif;
 }
 
 .section_heading {
-  font-size: 13px;
+  font-size: 15px;
   font-family: sans-serif;
 }
 
 .bio {
-  font-size: 11px;
+  font-size: 13px;
   font-family: sans-serif;
 }
 
 .profession {
-  font-size: 11px;
+  font-size: 14px;
   font-family: sans-serif;
-  font-weight: 800;
 }
 
 .company {
   margin-top: 0;
-  font-size: 11px;
+  font-size: 13px;
   font-family: sans-serif;
 }
 
 .date {
-  font-size: 11px;
+  font-size: 13px;
   font-family: sans-serif;
 }
 
 .regular {
-  font-size: 11px;
+  font-size: 13px;
   font-family: sans-serif;
 }
 
 .bold_headline {
-  font-size: 11px;
+  font-size: 13px;
   font-family: sans-serif;
   font-weight: 800;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.email_info {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.career_section {
+  display: flex;
+}
+
+.left_justified {
+  display: flex;
+  flex-direction: column;
+}
+
+.right_justified {
+  display: flex;
+  flex-direction: column;
+}
+
+.career_section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.program {
+  display: flex;
+  justify-content: center;
+}
+
+.institution {
+  display: flex;
+  justify-content: center;
 }
