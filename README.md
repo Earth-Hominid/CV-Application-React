@@ -14,12 +14,13 @@ As recommended in React's documentation, state is held in the highest most point
 
 Switch statements were utilized to build a "stepping through process", which provides this one page application the feel of multiple pages.
 
-[Live Demo](https://earth-hominid.github.io/CV-Application-React/) :point_left:
+[Live Demo](https://earth-hominid.github.io/Resume-Builder-1.0/
+)   :point_left:
 
 ## Install
 
 ```
-git clone https://github.com/Earth-Hominid/CV-Application-React.git
+git clone https://github.com/Earth-Hominid/Resume-Builder-1.0.git
 cd cv-project
 npm install
 npm start
@@ -27,7 +28,8 @@ npm start
 
 ### Technology
 
-- ![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![image](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 ## Authors
 
