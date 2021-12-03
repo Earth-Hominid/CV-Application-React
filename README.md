@@ -20,7 +20,7 @@ Switch statements were utilized to build a "stepping through process", which pro
 ## Install
 
 ```
-git clone https://github.com/Earth-Hominid/CV-Application-React.git
+git clone https://github.com/Earth-Hominid/Resume-Builder-Version-1.0.git
 cd cv-project
 npm install
 npm start
