@@ -150,15 +150,42 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#submit_button {
+#continue_button {
   max-width: 150px;
+  text-align: center;
+  font-size: 0.85rem;
   border: 2px solid #02bd9c;
   border-radius: 20px;
   background-color: transparent;
   color: #02bd9c;
   font-weight: 600;
-  padding: 12px 20px;
+  padding: 0.8em;
   cursor: pointer;
+  caret-color: transparent;
+}
+
+#continue_button:hover {
+  color: white;
+  background-color: #02bd9c;
+}
+
+.continue_button:focus {
+  outline: none !important;
+  border: 2px solid #008060;
+}
+
+#submit_button {
+  max-width: 150px;
+  text-align: center;
+  font-size: 0.85rem;
+  border: 2px solid #02bd9c;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #02bd9c;
+  font-weight: 600;
+  padding: 0.8em;
+  cursor: pointer;
+  caret-color: transparent;
 }
 
 #submit_button:hover {
@@ -166,15 +193,21 @@
   background-color: #02bd9c;
 }
 
+.submit_button:focus {
+  outline: none !important;
+  border: 2px solid #008060;
+}
+
 #reset_button {
   max-width: 150px;
-  padding: 12px 20px;
+  padding: 1em;
   border: 2px solid red;
   color: red;
   font-weight: 600;
   border-radius: 20px;
   background-color: transparent;
   cursor: pointer;
+  caret-color: transparent;
 }
 
 #reset_button:hover {
@@ -182,8 +215,36 @@
   background-color: red;
 }
 
+#back_button {
+  max-width: 150px;
+  margin: 2px;
+  border: 2px solid red;
+  padding: 0.8em;
+  color: red;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+  caret-color: transparent;
+}
+
+#back_button:hover {
+  color: white;
+  background-color: red;
+}
+
 .button_holder {
   margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.button_holder_finish {
+  margin-top: 15em;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -321,4 +382,52 @@
 .resume_holder {
   margin-right: 15%;
   margin-left: 15%;
+}
+
+.fullname {
+  font-size: 21px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.phone {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+.section_heading {
+  font-size: 13px;
+  font-family: sans-serif;
+}
+
+.bio {
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+.profession {
+  font-size: 11px;
+  font-family: sans-serif;
+  font-weight: 800;
+}
+
+.company {
+  margin-top: 0;
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+.date {
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+.regular {
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+.bold_headline {
+  font-size: 11px;
+  font-family: sans-serif;
+  font-weight: 800;
 }

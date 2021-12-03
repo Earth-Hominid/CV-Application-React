@@ -1,61 +1,18 @@
 import React, { Component } from 'react';
 
 class Work extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      company: '',
-      sector: '',
-      profession: '',
-      professionStartDate: '',
-      professionEndDate: '',
-    };
-  }
-
-  handleCompanyChange = (event) => {
-    this.setState({
-      company: event.target.value,
-    });
+  continue = (e) => {
+    e.preventDefault();
+    this.props.nextStep();
   };
 
-  handleSectorChange = (event) => {
-    this.setState({
-      sector: event.target.value,
-    });
-  };
-
-  handleProfessionChange = (event) => {
-    this.setState({
-      profession: event.target.value,
-    });
-  };
-
-  handleStartChange = (event) => {
-    this.setState({
-      professionStartDate: event.target.value,
-    });
-  };
-
-  handleEndChange = (event) => {
-    this.setState({
-      professionEndDate: event.target.value,
-    });
-  };
-
-  submitForm = (event) => {
-    event.preventDefault();
-    this.props.handleProfessionInfoProvided(this.state);
+  back = (e) => {
+    e.preventDefault();
+    this.props.prevStep();
   };
 
   render() {
-    const {
-      company,
-      sector,
-      profession,
-      professionStartDate,
-      professionEndDate,
-    } = this.state;
+    const { values, handleChange } = this.props;
     return (
       <div>
         <div className="main_form_card">
@@ -63,17 +20,17 @@ class Work extends Component {
             <label className="form_text">Company Name:</label>
             <input
               className="input"
-              value={company}
+              value={values.company}
               type="text"
-              onChange={this.handleCompanyChange}
+              onChange={handleChange('company')}
               id="company"
               name="company"
             ></input>
             <label className="form_text">Sector</label>
             <select
               id="sector"
-              value={sector}
-              onChange={this.handleSectorChange}
+              value={values.sector}
+              onChange={handleChange('sector')}
               name="sector"
               className="input"
             >
@@ -129,8 +86,8 @@ class Work extends Component {
             </select>
             <label className="form_text">Profession</label>
             <select
-              value={profession}
-              onChange={this.handleProfessionChange}
+              value={values.profession}
+              onChange={handleChange('profession')}
               id="profession"
               name="profession"
               className="input"
@@ -164,8 +121,8 @@ class Work extends Component {
             <label className="form_text">Start date:</label>
             <input
               className="input"
-              value={professionStartDate}
-              onChange={this.handleStartChange}
+              value={values.professionStartDate}
+              onChange={handleChange('professionStartDate')}
               type="date"
               id="start"
               name="program-start"
@@ -175,8 +132,8 @@ class Work extends Component {
             <label className="form_text">End date:</label>
             <input
               className="input"
-              value={professionEndDate}
-              onChange={this.handleEndChange}
+              value={values.professionEndDate}
+              onChange={handleChange('professionEndDate')}
               type="date"
               id="end"
               name="program-end"
@@ -184,8 +141,18 @@ class Work extends Component {
               max="2025-01-01"
             ></input>
             <div className="button_holder">
-              <input id="submit_button" type="submit" value="Submit"></input>
-              <input id="reset_button" type="reset"></input>
+              <input
+                id="continue_button"
+                type="continue"
+                value="Continue"
+                onClick={this.continue}
+              ></input>
+              <input
+                id="back_button"
+                type="back"
+                value="Back"
+                onClick={this.back}
+              ></input>
             </div>
           </form>
         </div>

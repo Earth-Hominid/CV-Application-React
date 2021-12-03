@@ -1,27 +1,18 @@
 import React, { Component } from 'react';
 
 class Profile extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      profile: '',
-    };
-  }
-
-  handleProfileChange = (event) => {
-    this.setState({
-      profile: event.target.value,
-    });
+  continue = (e) => {
+    e.preventDefault();
+    this.props.nextStep();
   };
 
-  submitForm = (event) => {
-    event.preventDefault();
-    this.props.handleProfileProvided(this.state);
+  back = (e) => {
+    e.preventDefault();
+    this.props.prevStep();
   };
 
   render() {
-    const { profile } = this.state;
+    const { values, handleChange } = this.props;
     return (
       <div>
         <div className="card_header">
@@ -35,18 +26,28 @@ class Profile extends Component {
           </p>
         </div>
         <div className="main_form_card">
-          <form className="education_form" onSubmit={this.submitForm}>
+          <form className="education_form">
             <textarea
               type="text"
               id="professional_summary"
               name="profile"
               className="textarea_input"
-              value={profile}
-              onChange={this.handleProfileChange}
+              value={values.profile}
+              onChange={handleChange('profile')}
             ></textarea>
             <div className="button_holder">
-              <input id="submit_button" type="submit" value="Submit"></input>
-              <input id="reset_button" type="reset"></input>
+              <input
+                id="continue_button"
+                type="continue"
+                value="Continue"
+                onClick={this.continue}
+              ></input>
+              <input
+                id="back_button"
+                type="back"
+                value="Back"
+                onClick={this.back}
+              ></input>
             </div>
           </form>
         </div>
