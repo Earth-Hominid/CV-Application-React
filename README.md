@@ -1,4 +1,6 @@
-# CV-Project
+Version 1 
+
+# Resume-Builder | React Class Components
 
 The purpose of this project is to build a CV/Resume building application using React as a framework and utilizing React class components.
 
