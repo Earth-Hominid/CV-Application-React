@@ -54,8 +54,18 @@ export class PersonalInfo extends Component {
             onChange={handleChange('phone')}
           ></input>
           <div className="button_holder">
-            <input id="submit_button" type="continue" value="Continue"></input>
-            <input id="back_button" type="back" value="Back"></input>
+            <input
+              id="continue_button"
+              type="continue"
+              value="Continue"
+              onClick={this.continue}
+            ></input>
+            <input
+              id="back_button"
+              type="back"
+              value="Back"
+              onClick={this.back}
+            ></input>
           </div>
         </form>
       </div>

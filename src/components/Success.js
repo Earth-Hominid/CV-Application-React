@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class Success extends Component {
+class Success extends Component {
   continue = (e) => {
     e.preventDefault();
     // PROCESS FORM //
@@ -17,12 +17,20 @@ export class Success extends Component {
       <div>
         <div className="card_header">
           <h2 className="welcome_header">
-            Congratulations, You Finished! If you would like to print your
-            resume, click below.
+            Congratulations, you completed your resume! Click below to print a
+            copy.
           </h2>
         </div>
         <div className="welcome_button_holder">
           <button className="welcome_button">Print My Resume</button>
+        </div>
+        <div className="button_holder_finish">
+          <input
+            id="back_button"
+            type="back"
+            value="Back"
+            onClick={this.back}
+          ></input>
         </div>
       </div>
     );

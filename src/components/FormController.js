@@ -72,8 +72,7 @@ class App extends Component {
       professionEndDate,
       institution,
       program,
-      educationEndDate,
-      educationStartDate,
+      educationCity,
     } = this.state;
     const values = {
       firstname,
@@ -88,8 +87,7 @@ class App extends Component {
       professionEndDate,
       institution,
       program,
-      educationEndDate,
-      educationStartDate,
+      educationCity,
     };
 
     switch (step) {
@@ -106,6 +104,7 @@ class App extends Component {
             <Nav />
             <PersonalInfo
               nextStep={this.nextStep}
+              prevStep={this.prevStep}
               handleChange={this.handleChange}
               values={values}
             />
@@ -162,7 +161,7 @@ class App extends Component {
         return (
           <>
             <Nav />
-            <Success />
+            <Success prevStep={this.prevStep} values={values} />
           </>
         );
       default:

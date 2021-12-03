@@ -1,97 +1,56 @@
 import React, { Component } from 'react';
 
 export class School extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      institution: '',
-      program: '',
-      educationStartDate: '',
-      educationEndDate: '',
-    };
-  }
-
-  submitForm = (event) => {
-    event.preventDefault();
-    this.props.handleEducationInfoProvided(this.state);
+  continue = (e) => {
+    e.preventDefault();
+    this.props.nextStep();
   };
 
-  handleInstitutionChange = (event) => {
-    this.setState({
-      institution: event.target.value,
-    });
-  };
-
-  handleProgramChange = (event) => {
-    this.setState({
-      program: event.target.value,
-    });
-  };
-
-  handleStartChange = (event) => {
-    this.setState({
-      educationStartDate: event.target.value,
-    });
-  };
-
-  handleEndChange = (event) => {
-    this.setState({
-      educationEndDate: event.target.value,
-    });
-  };
-
-  handleSubmit = (event) => {
-    alert(
-      `${this.state.institution} ${this.state.program} ${this.state.start} ${this.state.end}`
-    );
-    event.preventDefault();
+  back = (e) => {
+    e.preventDefault();
+    this.props.prevStep();
   };
 
   render() {
-    const { institution, program, educationStartDate, educationEndDate } =
-      this.state;
+    const { values, handleChange } = this.props;
     return (
       <div>
         <div className="main_form_card">
-          <form className="education_form" onSubmit={this.submitForm}>
+          <form className="education_form">
             <label className="form_text"> Institution:</label>
             <input
               className="input"
-              value={institution}
-              onChange={this.handleInstitutionChange}
+              value={values.institution}
+              onChange={handleChange('institution')}
             ></input>
             <label className="form_text">Program:</label>
             <input
               className="input"
-              value={program}
-              onChange={this.handleProgramChange}
+              value={values.program}
+              onChange={handleChange('program')}
             ></input>
-            <label className="form_text">Start date:</label>
+            <label className="form_text">City:</label>
             <input
-              value={educationStartDate}
-              onChange={this.handleStartChange}
+              value={values.educationCity}
+              onChange={handleChange('educationCity')}
               className="input"
-              type="date"
-              id="start"
-              name="program-start"
-              min="1950-01-01"
-              max="2025-01-01"
-            ></input>
-            <label className="form_text">End date:</label>
-            <input
-              className="input"
-              value={educationEndDate}
-              onChange={this.handleEndChange}
-              type="date"
-              id="end"
-              name="program-end"
-              min="1950-01-01"
-              max="2025-01-01"
+              type="text"
+              id="educationCity"
+              name="education-city"
             ></input>
             <div className="button_holder">
-              <input id="submit_button" type="submit" value="Submit"></input>
-              <input id="reset_button" type="reset"></input>
+              <input
+                id="continue_button"
+                type="continue"
+                value="Continue"
+                onClick={this.continue}
+              ></input>
+              <input
+                id="back_button"
+                type="back"
+                value="Back"
+                onClick={this.back}
+              ></input>
             </div>
           </form>
         </div>
