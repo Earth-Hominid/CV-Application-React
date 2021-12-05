@@ -9,7 +9,7 @@ import './styles.css';
 import Resume from './Resume';
 import Success from './Success';
 
-class App extends Component {
+class FormController extends Component {
   constructor(props) {
     super(props);
 
@@ -170,4 +170,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default FormController;
