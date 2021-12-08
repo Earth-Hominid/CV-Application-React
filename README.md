@@ -21,7 +21,7 @@ Switch statements were utilized to build a "stepping through process", which pro
 
 ```
 git clone https://github.com/Earth-Hominid/Resume-Builder-1.0.git
-cd cv-project
+cd Resume-Builder-1.0
 npm install
 npm start
 ```
